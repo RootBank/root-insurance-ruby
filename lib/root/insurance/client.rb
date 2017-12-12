@@ -37,5 +37,11 @@ module Root::Insurance
       client.put("insurance/#{entity}", cleaned_data)
     end
 
+    def patch(entity, data)
+      cleaned_data = data.reject { |key, value| value.nil? }
+
+      client.patch("insurance/#{entity}", cleaned_data)
+    end
+
   end
 end

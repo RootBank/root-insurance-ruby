@@ -16,5 +16,21 @@ class Root::Insurance::Client
       post(:policyholders, data)
     end
 
+    def list_policy_holders
+      get(:policyholders)
+    end
+
+    def get_policy_holder(id:)
+      get("policyholders/#{id}")
+    end
+
+    def update_policy_holder(id:, email: nil, cellphone: nil)
+      data = {
+        email:     email,
+        cellphone: cellphone
+      }
+      patch("policyholders/#{id}", data)
+    end
+
   end
 end
