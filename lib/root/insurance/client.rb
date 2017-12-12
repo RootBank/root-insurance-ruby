@@ -1,12 +1,14 @@
 require 'root/insurance/client/quote'
 require 'root/insurance/client/policy_holder'
 require 'root/insurance/client/application'
+require 'root/insurance/client/policy'
 
 module Root::Insurance
   class Client
     include Root::Insurance::Client::Quote
     include Root::Insurance::Client::PolicyHolder
     include Root::Insurance::Client::Application
+    include Root::Insurance::Client::Policy
 
     def initialize(app_id, app_secret, env=nil)
       @app_id = app_id
@@ -27,6 +29,12 @@ module Root::Insurance
 
     def get(entity)
       client.get("insurance/#{entity}")
+    end
+
+    def put(entity, data)
+      cleaned_data = data.reject { |key, value| value.nil? }
+
+      client.put("insurance/#{entity}", cleaned_data)
     end
 
   end
