@@ -47,7 +47,7 @@ class Root::Insurance::Client
       post("policies/#{id}/billing_amount", data)
     end
 
-    def get_policy_beneficiaries(id:)
+    def list_policy_beneficiaries(id:)
       get("policies/#{id}/beneficiaries")
     end
 
