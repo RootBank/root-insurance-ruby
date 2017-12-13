@@ -50,5 +50,9 @@ class Root::Insurance::Client
     def get_policy_beneficiaries(id:)
       get("policies/#{id}/beneficiaries")
     end
+
+    def list_policy_events(id:)
+      get("policies/#{id}/events")
+    end
   end
 end

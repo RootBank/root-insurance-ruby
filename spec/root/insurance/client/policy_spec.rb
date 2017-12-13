@@ -124,4 +124,16 @@ describe Root::Insurance::Client::Policy do
       client.get_policy_beneficiaries(id: policy_id)
     end
   end
+
+  describe :list_policy_events do
+    let(:get_url) { "#{url}/#{policy_id}/events" }
+
+    it "gets from the correct url" do
+      stub_request(:get, get_url)
+        .to_return(body: "{}")
+
+      client.list_policy_events(id: policy_id)
+    end
+  end
+
 end
