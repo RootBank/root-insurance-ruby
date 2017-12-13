@@ -1,5 +1,11 @@
 # Changelog
 
+# 0.1.0 - Release date: 2017-13-12
+* Added events endpoints for policy holders, policies and claims
+* Fixed method naming inconsistency (it's actually a breaking change, but yolo)
+* DRYed up some specs
+
+
 # 0.0.4 - Release date: 2017-13-12
 * Fixed claim list filtering
 
