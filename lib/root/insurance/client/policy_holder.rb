@@ -32,5 +32,9 @@ class Root::Insurance::Client
       patch("policyholders/#{id}", data)
     end
 
+    def list_policy_holder_events(id:)
+      get("policyholders/#{id}/events")
+    end
+
   end
 end

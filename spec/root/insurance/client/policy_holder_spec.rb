@@ -88,4 +88,15 @@ describe Root::Insurance::Client::PolicyHolder do
     end
   end
 
+  describe :list_policy_holder_events do
+    let(:events_url) { "#{url}/#{policyholder_id}/events" }
+
+    it "gets from the correct url" do
+      stub_request(:get, events_url)
+        .to_return(body: "{}")
+
+      client.list_policy_holder_events(id: policyholder_id)
+    end
+  end
+
 end
