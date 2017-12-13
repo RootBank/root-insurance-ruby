@@ -1,4 +1,4 @@
-describe Root::Insurance::Client::Application do
+describe Root::Insurance::Client::Policy do
   let(:base_url) { "https://sandbox.root.co.za/v1/insurance" }
   let(:url) { "#{base_url}/policies" }
 
