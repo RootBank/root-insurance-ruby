@@ -2,8 +2,8 @@ class Root::Insurance::Client
   module Claim
     def list_claims(status: nil, approval: nil)
       query = {
-        status:   status,
-        approval: approval
+        claim_status:    status,
+        approval_status: approval
       }
 
       get(:claims, query)
