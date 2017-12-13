@@ -1,5 +1,8 @@
 # Root Insurance
 
+This gem is a simple wrapper around Root's Insurance API.
+The full api documentation can be found [here](https://app.root.co.za/docs/insurance/api).
+
 ## Installation
 
 Add hese two lines to your application's Gemfile:
