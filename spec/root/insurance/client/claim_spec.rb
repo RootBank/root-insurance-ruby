@@ -8,6 +8,8 @@ describe Root::Insurance::Client::Claim do
 
   let(:client) { Root::Insurance::Client.new(app_id, app_id, environment) }
 
+  let(:claim_id) { "d3d13c48-4dc3-4816-8d01-de321587822" }
+
   describe :list_claims do
     context "without any query params" do
       it "gets from the correct url" do
@@ -46,8 +48,6 @@ describe Root::Insurance::Client::Claim do
   end
 
   describe :get_claim do
-    let(:claim_id) { "d3d13c48-4dc3-4816-8d01-de321587822" }
-
     it "gets from the correct url" do
       claim_url = "#{url}/#{claim_id}"
       stub_request(:get, claim_url)
@@ -92,7 +92,6 @@ describe Root::Insurance::Client::Claim do
   end
 
   describe :link_policy_to_claim do
-    let(:claim_id) { "bf1ada91-eecb-4f47-9bfa-1258bb1e0055" }
     let(:policy_id) { "8349345c-a6c5-4bf9-8ebb-6bbfc1628715" }
 
     let(:link_url) { "#{url}/#{claim_id}/policy" }
@@ -109,7 +108,6 @@ describe Root::Insurance::Client::Claim do
   end
 
   describe :link_policholdery_to_claim do
-    let(:claim_id) { "bf1ada91-eecb-4f47-9bfa-1258bb1e0055" }
     let(:policyholder_id) { "8349345c-a6c5-4bf9-8ebb-6bbfc1628715" }
 
     let(:link_url) { "#{url}/#{claim_id}/policyholder" }
@@ -122,6 +120,16 @@ describe Root::Insurance::Client::Claim do
       client.link_policyholder_to_claim(
         claim_id:        claim_id,
         policyholder_id: policyholder_id)
+    end
+  end
+
+  describe :list_claim_events do
+    let(:get_url) { "#{url}/#{claim_id}/events" }
+    it "gets from the correct url" do
+      stub_request(:get, get_url)
+        .to_return(body: "{}")
+
+      client.list_claim_events(id: claim_id)
     end
   end
 end

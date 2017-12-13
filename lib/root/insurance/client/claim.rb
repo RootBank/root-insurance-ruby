@@ -34,5 +34,9 @@ class Root::Insurance::Client
       post("claims/#{claim_id}/policyholder", data)
     end
 
+    def list_claim_events(id:)
+      get("claims/#{id}/events")
+    end
+
   end
 end
