@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.2.0 - Release date: 2017-14-12
+* Quote api also works for term and funeral insurance
+
+
 # 0.1.0 - Release date: 2017-13-12
 * Added events endpoints for policy holders, policies and claims
 * Fixed method naming inconsistency (it's actually a breaking change, but yolo)
