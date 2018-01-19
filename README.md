@@ -1,3 +1,5 @@
+> ⚠️ This insurance repository has been created for OfferZen Make days and will be merged into the official Root Ruby SDK in the future.
+
 # Root Insurance
 
 This gem is a simple wrapper around Root's Insurance API.
