@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.2.1 - Release date: 2018-24-01
+* Spec cleanups
+
+
 # 0.2.0 - Release date: 2017-14-12
 * Quote api also works for term and funeral insurance
 
