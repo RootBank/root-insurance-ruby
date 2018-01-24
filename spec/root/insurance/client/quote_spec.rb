@@ -6,7 +6,7 @@ describe Root::Insurance::Client::Quote do
   let(:app_secret)  { 'app_secret' }
   let(:environment) { :sandbox }
 
-  let(:client) { Root::Insurance::Client.new(app_id, app_id, environment) }
+  let(:client) { Root::Insurance::Client.new(app_id, app_secret, environment) }
 
   describe :create_quote do
     context "root gadgets" do
