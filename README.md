@@ -1,4 +1,7 @@
+
 > ⚠️ This insurance repository has been created for OfferZen Make days and will be merged into the official Root Ruby SDK in the future.
+
+> ⚠️ This version of the repository is no longer being maintained. The maintained version can be found [here](https://github.com/root-community/root-insurance-ruby).
 
 # Root Insurance
 
